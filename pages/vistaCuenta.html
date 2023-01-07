@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/icon"
+      href="../images/others/4202091logonikeshoessocialsocialmedia-115597_115704.svg"
+    />
+
+    <link rel="stylesheet" href="./../css/vistaCuenta.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./../css/popups.css" />
+    <link rel="stylesheet" href="./../css/shared/header.css" />
+    <link rel="stylesheet" href="./../css/shared/footer.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/jpg" href="./images/others/jordan-icon.jpg" />
+    <title>Mi cuenta</title>
+  </head>
+  <body>
+    <header class="header">
+      <figure class="header__logo">
+        <a href="../index.html">
+          <img src="../images/others/jordan-icon.jpg" alt="jordan logo" />
+        </a>
+      </figure>
+      <nav class="header__nav menu-close" id="headerNav">
+        <ul class="nav__container">
+          <li><a class="nav__link" href="../index.html">Home</a></li>
+          <li><a class="nav__link" href="./contact.html">Contacto</a></li>
+          <li><a class="nav__link" href="./catalog.html">Catálogo</a></li>
+          <li>
+            <a class="nav__link nav__link--miCuenta" href="./vistaCuenta.html"
+              >Mi Cuenta</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div id="iconos">
+        <a href="./shopping-cart.html"
+          ><i class="bx bx-cart nav__carrito"></i
+        ></a>
+        <a href="./register.html"><i class="bx bx-user nav__carrito"></i></a>
+      </div>
+      <div class="navMenu__container">
+        <i class="bx bx-menu navMenu__icon" id="navMenu"></i>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div id="tarjetas">
+          <div class="titulo">
+            <h2>Mis Tarjetas</h2>
+            <button id="agregarTarjeta" class="agregar">Agregar Tarjeta</button>
+          </div>
+          <hr />
+          <div class="tarjetasContainer">
+            <div class="tarjeta"></div>
+          </div>
+        </div>
+        <div id="direcciones">
+          <div class="titulo">
+            <h2>Mis Direcciones</h2>
+            <button class="agregar" id="agregarDireccion">
+              Agregar Dirección
+            </button>
+          </div>
+          <hr />
+          <div class="direccionesContainer">
+            <div class="direccion"></div>
+          </div>
+        </div>
+        <!-- POPUP NUEVA TARJETA -->
+        <article class="popUp popUpTarjeta" id="popupTarjeta">
+          <div class="rowBox">
+            <div class="tituloAndIcon">
+              <h2 class="popUp__title">Nueva Tarjeta</h2>
+              <i class="bx bxs-credit-card"></i>
+            </div>
+            <div class="iconSalir">
+              <i class="bx bx-x closeBtnTarjeta" id="closeBtnTarjeta"></i>
+            </div>
+          </div>
+          <form action="#" class="form" id="form-tarjeta" method="get">
+            <div>
+              <label class="text-izquierda3" for="serial"
+                >Número de tarjeta</label
+              >
+              <input
+                class="text-derecha3"
+                id="serial"
+                type="number"
+                name="serial"
+                placeholder="10 Dígitos"
+              />
+            </div>
+            <div>
+              <label class="text-izquierda4" for="cod-seguridad"
+                >Código de seguridad</label
+              >
+              <input
+                class="text-derecha4"
+                id="cod-seguridad"
+                type="text"
+                name="cod-seguridad"
+                placeholder="xxx"
+              />
+            </div>
+            <div>
+              <label class="text-izquierda5" for="vencimiento"
+                >Vencimiento</label
+              >
+              <input
+                class="text-derecha5"
+                id="vencimiento"
+                type="text"
+                name="vencimiento"
+                placeholder="mm/aa"
+              />
+            </div>
+            <div>
+              <label class="text-izquierda6" for="titular"
+                >Nombre Titular</label
+              >
+              <input
+                class="text-derecha6"
+                id="titular"
+                type="text"
+                name="titular"
+                placeholder="Titular"
+              />
+            </div>
+            <button type="submit" id="guardarTarjeta">Guardar</button>
+            <p class="mensajesDeError" id="mensaje2"></p>
+          </form>
+        </article>
+        <!-- POPUP DATOS -->
+        <article class="popUp" id="popupDireccion">
+          <div class="rowBox">
+            <div class="tituloAndIcon">
+              <h2 class="popUp__title">Nueva Dirección</h2>
+              <i class="bx bxs-home"></i>
+            </div>
+            <div class="iconSalir">
+              <i class="bx bx-x" id="closeBtnDireccion"></i>
+            </div>
+          </div>
+          <form class="form" id="formularioDireccion">
+            <div>
+              <label for="alias">Alias</label>
+              <input id="alias" type="text" name="alias" placeholder="Alias" />
+            </div>
+            <div>
+              <label class="text-izquierda2" for="provincias">Provincias</label>
+              <select class="text-derecha2" id="provincias" name="provincias">
+                <option value="1">Buenos Aires</option>
+                <option value="2">Catamarca</option>
+                <option value="3">Chaco</option>
+                <option value="4">Chubut</option>
+                <option value="5">Córdoba</option>
+                <option value="6">Corrientes</option>
+                <option value="7">Entre Ríos</option>
+                <option value="8">Formosa</option>
+                <option value="9">Jujuy</option>
+                <option value="10">La Pampa</option>
+                <option value="11">La Rioja</option>
+                <option value="12">Mendoza</option>
+                <option value="13">Misiones</option>
+                <option value="14">Neuquén</option>
+                <option value="15">Río Negro</option>
+                <option value="16">Salta</option>
+                <option value="17">San Juan</option>
+                <option value="18">San Luis</option>
+                <option value="19">Santa Cruz</option>
+                <option value="20">Santa Fe</option>
+                <option value="21">Santiago del Estero</option>
+                <option value="22">Tierra del Fuego</option>
+                <option value="23">Tucumán</option>
+              </select>
+            </div>
+            <div>
+              <label id="localidad" for="localidades">Localidad</label>
+              <select id="localidades" name="localidades">
+                <option value="1">Villa Eduardo Madero</option>
+              </select>
+            </div>
+            <div>
+              <label for="direccion">Dirección</label>
+              <input
+                id="direccion"
+                type="text"
+                name="direccion"
+                placeholder="Varela 1234"
+              />
+            </div>
+            <div>
+              <label for="tel">Telefono</label>
+              <input
+                id="tel"
+                type="number"
+                name="tel"
+                placeholder="11 xxxx xxxx"
+                required
+              />
+            </div>
+            <div>
+              <label for="piso">Piso</label>
+              <input
+                id="piso"
+                type="number"
+                name="piso"
+                placeholder="Número de piso"
+              />
+            </div>
+            <div>
+              <label for="dept">Dept</label>
+              <input
+                id="dept"
+                type="text"
+                name="dept"
+                pattern="[A-Za-z]{1}"
+                placeholder="Ej:A"
+              />
+            </div>
+            <button type="submit" id="agregarDireccionPopUp">agregar</button>
+            <p class="mensajesDeError" id="mensajeDireccion"></p>
+          </form>
+        </article>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <div id="footer__upper">
+          <div id="social">
+            <p>Social</p>
+            <i class="bx bxl-facebook-circle"></i>
+            <i class="bx bxl-instagram"></i>
+            <i class="bx bxl-twitter"></i>
+          </div>
+          <div id="schedule">
+            <p>Lunes a Sabado de 8hs a 19hs</p>
+          </div>
+        </div>
+        <div id="footer__lower">
+          <div id="copyright">
+            <p id="author">© 2022 The Jordan Palace</p>
+          </div>
+          <div id="terms">
+            <p>Terminos de uso</p>
+            <p>Politica de privacidad</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./../js/vistaCuenta.js"></script>
+    <script src="./../js/header.js"></script>
+  </body>
+</html>

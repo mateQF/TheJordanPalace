@@ -1,0 +1,208 @@
+.popUp {
+  width: 40em;
+  height: 40em;
+  border-radius: 10px;
+  display: none;
+  place-items: center;
+  flex-direction: column;
+  margin-bottom: 2em;
+  position: absolute;
+  background-color: black;
+}
+
+.popUpDireccionActivo {
+  display: flex;
+  height: auto;
+}
+.rowBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+
+.tituloAndIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.iconSalir {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  position: absolute;
+  top: 25px;
+  right: 50px;
+}
+
+.popUp__title {
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+}
+.rowBox i {
+  color: white;
+  font-size: 3.5em;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 70%;
+}
+.form div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  margin-bottom: 1em;
+  font-size: 1.6em;
+  color: white;
+}
+.form input,
+.form select {
+  width: 10em;
+}
+.form button {
+  text-transform: capitalize;
+  font-size: 1.5em;
+  padding: 0.5em 1.6em;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  background-color: white;
+  align-self: center;
+  cursor: pointer;
+  margin-top: 1em;
+  transition: all 300ms;
+}
+.form button:hover {
+  background: rgb(235, 156, 52);
+}
+
+#agregarDireccionPopUp {
+  margin-top: 0;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+
+.popupTarjeta {
+  display: none;
+  background: #222222e7;
+  height: 30em;
+  width: 30em;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 500px;
+  flex-direction: column;
+  border-radius: 15px;
+  position: absolute;
+}
+
+.popupTarjetasActivo {
+  display: flex;
+  height: auto;
+}
+
+input[type="text"] {
+  color: black;
+  padding-left: 5px;
+  outline: none;
+  overflow: hidden;
+}
+
+input[type="number"] {
+  color: black;
+  padding-left: 5px;
+  /* padding-right: 5px; */
+  outline: none;
+  overflow: hidden;
+}
+
+input[type="tel"] {
+  color: black;
+  padding-left: 5px;
+  outline: none;
+  overflow: hidden;
+}
+
+select {
+  color: black;
+  padding-left: 5px;
+}
+
+.closeBtn {
+  color: black;
+  position: absolute;
+  z-index: 99999;
+  font-size: 3em;
+  top: -120px;
+  left: 290px;
+  cursor: pointer;
+  transition: all 0.8s;
+}
+#closeBtnDireccion {
+  color: white;
+  z-index: 99999;
+  font-size: 3em;
+  cursor: pointer;
+  transition: all 0.8s;
+}
+#closeBtnTarjeta {
+  transition: all 0.8s;
+  color: white;
+}
+#closeBtnTarjeta:hover,
+#closeBtnDireccion:hover {
+  transform: rotate(-90deg);
+  color: rgb(235, 156, 52);
+}
+
+#form-tarjeta {
+  margin-bottom: 20px;
+}
+
+#formularioDireccion {
+  margin-bottom: 20px;
+}
+
+/* mensajes de error */
+form p {
+  margin-top: 10px;
+  color: red;
+}
+
+@media (max-width: 600px) {
+  .popupTarjeta {
+    width: 20em;
+  }
+  .closeBtn {
+    left: 230px;
+  }
+}
+@media (max-width: 700px) {
+  #tituloAndIcon {
+    font-size: 12px;
+  }
+
+  .popUp {
+    width: 30em;
+  }
+
+  .iconSalir {
+    right: 10px;
+  }
+
+  #form-tarjeta div label {
+    font-size: 17px;
+  }
+
+  #form-tarjeta div input {
+    padding: 5px;
+  }
+}

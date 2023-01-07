@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      type="image/icon"
+      href="../images/others/4202091logonikeshoessocialsocialmedia-115597_115704.svg"
+    />
+
+    <link rel="stylesheet" href="./../css/login.css" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/jpg"
+      href="./../images/others/jordan-icon.jpg"
+    />
+    <title>The Jordan Palace</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="form-login">
+        <form
+          method="get"
+          action="./../index.html"
+          enctype="application/x-www-form-urlencoded"
+          class="form"
+        >
+          <a href="./../index.html">
+            <img src="../images/others/jordan_logo.png" alt="logo-jordan" />
+          </a>
+          <h5>Iniciar Sesion</h5>
+          <div id="campos">
+            <div class="email">
+              <label for="email">Email</label>
+              <input
+                class="field"
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Ingrese su email"
+              />
+            </div>
+            <div class="password">
+              <label for="password">Contraseña</label>
+              <input
+                class="field"
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Ingrese su contraseña"
+                onkeyup="enableButton(password)"
+              />
+            </div>
+          </div>
+          <p>
+            <a href="#" id="olvidarContraseña">¿Olvidaste tu contraseña?</a>
+          </p>
+          <input
+            type="submit"
+            class="ingreso"
+            value="Ingresar"
+            id="button"
+            disabled
+          />
+          <p class="siNoTieneCuenta">
+            Si no tiene una cuenta, puede
+            <a href="register.html" id="siNoTieneCuenta">registrarse</a>
+          </p>
+        </form>
+      </section>
+    </main>
+    <script src="./../js/login.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </body>
+</html>

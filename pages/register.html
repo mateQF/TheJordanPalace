@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/icon"
+      href="../images/others/4202091logonikeshoessocialsocialmedia-115597_115704.svg"
+    />
+
+    <link rel="stylesheet" href="./../css/register.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/jpg" href="./images/others/jordan-icon.jpg" />
+    <title>The Jordan Palace</title>
+  </head>
+  <body>
+    <main class="main">
+      <form
+        class="form-login"
+        action="./../pages/login.html"
+        method="get"
+        enctype="application/x-www-form-urlencoded"
+      >
+        <a href="./../index.html">
+          <img src="../images/others/jordan_logo.png" alt="logo-jordan" />
+        </a>
+        <h5>Registrarse</h5>
+        <br />
+        <input
+          class="field"
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Ingrese su email"
+          required
+        />
+        <br />
+        <input
+          class="field"
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Ingrese su nombre"
+          required
+        />
+        <br />
+        <input
+          class="field"
+          type="text"
+          name="surname"
+          id="surname"
+          placeholder="Ingrese su apellido"
+          required
+        />
+        <br />
+        <input
+          class="field"
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Ingrese su contraseña"
+          required
+        />
+        <br />
+        <input
+          class="field"
+          type="password"
+          name="password"
+          id="repeatPassword"
+          placeholder="Repita su contraseña"
+          required
+        />
+        <br />
+        <input
+          type="submit"
+          class="ingreso"
+          value="Ingresar"
+          id="botonIngreso"
+        />
+        <br />
+        <br />
+        <p class="siNoTieneCuenta">
+          Si ya tiene una cuenta, puede
+          <a href="./login.html" id="siNoTieneCuenta">iniciar Sesion</a>
+        </p>
+      </form>
+      <div id="message" class="error" style="display: none"></div>
+    </main>
+    <script src="./../js/register.js"></script>
+  </body>
+</html>

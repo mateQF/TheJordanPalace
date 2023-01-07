@@ -1,0 +1,159 @@
+html {
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+html::-webkit-scrollbar {
+  width: 1em;
+}
+html::-webkit-scrollbar-track {
+  background-color: #dee2e6;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: #343a40;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+  background-color: black;
+  height: 4.375em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5em 5em;
+  position: fixed;
+  z-index: 999999;
+}
+
+main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.header__logo {
+  width: 4.375em;
+  height: 4.375em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__logo img {
+  width: 100%;
+}
+.nav__container {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: center;
+}
+.nav__link {
+  font-size: 1.25em;
+  color: white;
+  text-decoration: none;
+  transition: all 700ms;
+  margin: 0 1.5em;
+  text-align: center;
+}
+.nav__link:hover {
+  color: gray;
+}
+.nav__link--miCuenta {
+  cursor: pointer;
+}
+.nav__carrito {
+  font-size: 2em;
+  color: white;
+  transition: all 0.6s;
+  margin-right: 1.1em;
+}
+.nav__carrito:hover {
+  transform: rotate(25deg);
+}
+
+#iconos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========== MENU ========== */
+.navMenu__container {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 0%;
+  }
+
+  #iconos {
+    margin-right: 100px;
+    margin: 0 auto;
+    padding-top: 15px;
+  }
+
+  .header__logo {
+    padding-left: 1em;
+  }
+  .navMenu__container {
+    display: block;
+    position: fixed;
+    right: 2rem;
+    top: 1.2em;
+  }
+  .navMenu__icon {
+    color: white;
+    font-size: 1.875em;
+  }
+  .header__nav {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    background-color: black;
+    padding: 2rem 0;
+    transition: all 1.3s;
+  }
+  .nav__container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav__carrito {
+    margin-bottom: 0.5em;
+  }
+  .menu-open {
+    top: 4.4rem;
+    transition: 0.6s ease;
+    opacity: 1;
+  }
+  .menu-close {
+    top: -100%;
+    opacity: 0;
+  }
+  .nav__link {
+    margin: 1em 0;
+    display: block;
+  }
+}

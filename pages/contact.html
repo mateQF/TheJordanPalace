@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/icon"
+      href="../images/others/4202091logonikeshoessocialsocialmedia-115597_115704.svg"
+    />
+
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/jpg" href="./images/others/jordan-icon.jpg" />
+    <title>The Jordan Palace</title>
+  </head>
+  <body>
+    <header class="header">
+      <figure class="header__logo">
+        <a href="../index.html">
+          <img src="../images/others/jordan-icon.jpg" alt="jordan logo" />
+        </a>
+      </figure>
+      <nav class="header__nav menu-close" id="headerNav">
+        <ul class="nav__container">
+          <li><a class="nav__link" href="../index.html">Home</a></li>
+          <li><a class="nav__link" href="./contact.html">Contacto</a></li>
+          <li><a class="nav__link" href="./catalog.html">Catálogo</a></li>
+          <li>
+            <a class="nav__link nav__link--miCuenta" href="./vistaCuenta.html"
+              >Mi Cuenta</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div id="iconos">
+        <a href="./shopping-cart.html"
+          ><i class="bx bx-cart nav__carrito"></i
+        ></a>
+        <a href="./register.html"><i class="bx bx-user nav__carrito"></i></a>
+      </div>
+      <div class="navMenu__container">
+        <i class="bx bx-menu navMenu__icon" id="navMenu"></i>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="block__container">
+          <form action="#">
+            <h2>Contacto</h2>
+            <div class="input__block">
+              <label class="label" for="nombre">Nombre</label>
+              <input
+                class="field"
+                type="text"
+                name="nombre"
+                placeholder="Nombre"
+              />
+            </div>
+            <div class="input__block">
+              <label class="label" for="email">Email</label>
+              <input
+                class="field"
+                type="email"
+                name="email"
+                placeholder="Email"
+              />
+            </div>
+            <div class="input__block">
+              <label class="label" for="comentarios">Comentarios</label>
+              <textarea
+                class="textarea"
+                name="comentarios"
+                id="comentario"
+                cols="25"
+                rows="7"
+              ></textarea>
+            </div>
+            <button type="submit" class="btnEnviar">Enviar</button>
+          </form>
+        </div>
+        <div class="block__container">
+          <h2>The Jordan Palace</h2>
+          <ul>
+            <li class="contact__info">Direccion: Florencio Varela 1903</li>
+            <hr />
+            <li class="contact__info">Telefono: +54 011 4480-8900</li>
+            <hr />
+            <li class="contact__info">
+              Horarios de Atención: Lunes a Sabado de 8 a 19hs
+            </li>
+            <hr />
+            <li class="social social--igm">
+              <i class="bx bxl-instagram"></i>
+            </li>
+            <li class="social social--fb">
+              <i class="bx bxl-facebook"></i>
+            </li>
+            <li class="social social--wsp">
+              <i class="bx bxl-whatsapp"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="block__container">
+          <h2>¿Donde encontrarnos?</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.50283576064!2d-58.56805796614398!3d-34.667256618461096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc74d2a85f6b7%3A0xf7b42458c4ff6819!2sUnlam!5e0!3m2!1ses!2sar!4v1667063962393!5m2!1ses!2sar"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <div id="footer__upper">
+          <div id="social">
+            <p>Social</p>
+            <i class="bx bxl-facebook-circle"></i>
+            <i class="bx bxl-instagram"></i>
+            <i class="bx bxl-twitter"></i>
+          </div>
+          <div id="schedule">
+            <p>Lunes a Sabado de 8hs a 19hs</p>
+          </div>
+        </div>
+        <div id="footer__lower">
+          <div id="copyright">
+            <p id="author">© 2022 The Jordan Palace</p>
+          </div>
+          <div id="terms">
+            <p>Terminos de uso</p>
+            <p>Politica de privacidad</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./../js/header.js"></script>
+  </body>
+</html>
